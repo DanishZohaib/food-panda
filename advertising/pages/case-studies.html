@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies - pandaads</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .ad-platform header {
+            background-color: var(--dark-gray);
+        }
+
+        .ad-platform .logo h1 {
+            color: var(--white);
+        }
+
+        .ad-platform nav ul li a {
+            color: var(--white);
+        }
+
+        .ad-platform .btn-login {
+            color: var(--white);
+        }
+
+        .ad-platform .btn-signup {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        .case-studies-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .case-studies-hero h1 {
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .case-studies-hero p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .featured-case-study {
+            padding: 80px 0;
+            background: var(--light-gray);
+        }
+
+        .featured-case-study-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .featured-case-study-image {
+            background: var(--white);
+            border-radius: 10px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 4rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .featured-case-study-info h2 {
+            font-size: 2.5rem;
+            color: var(--dark-gray);
+            margin-bottom: 20px;
+        }
+
+        .case-study-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .metric-box {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .all-case-studies {
+            padding: 80px 0;
+        }
+
+        .case-studies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .case-study-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .case-study-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .case-study-image {
+            height: 200px;
+            background: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 3rem;
+        }
+
+        .case-study-content {
+            padding: 30px;
+        }
+
+        .case-study-content h3 {
+            color: var(--dark-gray);
+            margin-bottom: 15px;
+        }
+
+        .case-study-excerpt {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
+        .case-study-metrics-small {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .metric-small {
+            text-align: center;
+        }
+
+        .metric-small .value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .metric-small .label {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .ad-platform footer {
+            background-color: var(--dark-gray);
+        }
+
+        @media (max-width: 768px) {
+            .featured-case-study-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .case-studies-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .case-study-metrics {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="ad-platform">
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>pandaads</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="solutions.html">Solutions</a></li>
+                        <li><a href="#" class="active">Case Studies</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="tools.html">Tools</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn-login">Log In</button>
+                    <button class="btn-signup">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Case Studies Hero -->
+    <section class="case-studies-hero">
+        <div class="container">
+            <h1>Success Stories</h1>
+            <p>Discover how brands have achieved remarkable results with our advertising solutions</p>
+        </div>
+    </section>
+
+    <!-- Featured Case Study -->
+    <section class="featured-case-study">
+        <div class="container">
+            <div class="featured-case-study-content">
+                <div class="featured-case-study-image">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="featured-case-study-info">
+                    <h2>Global Restaurant Chain Increases Online Orders by 150%</h2>
+                    <p>Learn how a leading restaurant chain leveraged our in-app advertising solutions to significantly boost their online presence and drive more orders through the foodpanda platform.</p>
+                    
+                    <div class="case-study-metrics">
+                        <div class="metric-box">
+                            <div class="metric-value">150%</div>
+                            <div class="metric-label">Increase in Orders</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-value">240%</div>
+                            <div class="metric-label">ROAS Improvement</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-value">3.2M</div>
+                            <div class="metric-label">Impressions</div>
+                        </div>
+                    </div>
+                    
+                    <p>The campaign utilized homepage banners, targeted search ads, and push notifications to reach customers at key decision points.</p>
+                    <button class="btn btn-primary">Read Full Case Study</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Case Studies -->
+    <section class="all-case-studies">
+        <div class="container">
+            <div class="section-header">
+                <h2>More Success Stories</h2>
+                <p>See how diverse brands have utilized our advertising platform</p>
+            </div>
+
+            <div class="case-studies-grid">
+                <div class="case-study-card">
+                    <div class="case-study-image">
+                        <i class="fas fa-hamburger"></i>
+                    </div>
+                    <div class="case-study-content">
+                        <h3>Beverage Company Grows Brand Awareness</h3>
+                        <p>A leading beverage company partnered with us to promote their new product line to foodpanda's engaged audience.</p>
+                        
+                        <div class="case-study-metrics-small">
+                            <div class="metric-small">
+                                <div class="value">85%</div>
+                                <div class="label">Brand Lift</div>
+                            </div>
+                            <div class="metric-small">
+                                <div class="value">320%</div>
+                                <div class="label">Engagement Rate</div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-outline">View Case Study</button>
+                    </div>
+                </div>
+
+                <div class="case-study-card">
+                    <div class="case-study-image">
+                        <i class="fas fa-pizza-slice"></i>
+                    </div>
+                    <div class="case-study-content">
+                        <h3>Local Restaurant Chain Expands Market Share</h3>
+                        <p>A regional restaurant chain used our platform to expand into new markets and compete with established players.</p>
+                        
+                        <div class="case-study-metrics-small">
+                            <div class="metric-small">
+                                <div class="value">250%</div>
+                                <div class="label">New Customers</div>
+                            </div>
+                            <div class="metric-small">
+                                <div class="value">42%</div>
+                                <div class="label">Order Increase</div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-outline">View Case Study</button>
+                    </div>
+                </div>
+
+                <div class="case-study-card">
+                    <div class="case-study-image">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="case-study-content">
+                        <h3>Grocery Retailer Drives Delivery Orders</h3>
+                        <p>A major grocery retailer leveraged our platform to promote their delivery service during peak demand periods.</p>
+                        
+                        <div class="case-study-metrics-small">
+                            <div class="metric-small">
+                                <div class="value">180%</div>
+                                <div class="label">Delivery Growth</div>
+                            </div>
+                            <div class="metric-small">
+                                <div class="value">$1.2M</div>
+                                <div class="label">Additional Revenue</div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-outline">View Case Study</button>
+                    </div>
+                </div>
+
+                <div class="case-study-card">
+                    <div class="case-study-image">
+                        <i class="fas fa-cookie-bite"></i>
+                    </div>
+                    <div class="case-study-content">
+                        <h3>Dessert Brand Targets Food Enthusiasts</h3>
+                        <p>A premium dessert brand achieved significant results by targeting food lovers during relevant meal occasions.</p>
+                        
+                        <div class="case-study-metrics-small">
+                            <div class="metric-small">
+                                <div class="value">65%</div>
+                                <div class="label">Purchase Intent</div>
+                            </div>
+                            <div class="metric-small">
+                                <div class="value">280%</div>
+                                <div class="label">Conversion Rate</div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-outline">View Case Study</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="app-download" style="margin: 80px 0; background: var(--light-gray);">
+        <div class="container">
+            <div class="app-content" style="flex-direction: column; text-align: center;">
+                <div class="app-text">
+                    <h2>Ready to see results like these?</h2>
+                    <p>Our advertising solutions can help your brand achieve similar success.</p>
+                    <button class="btn btn-primary" style="margin-top: 20px;">Start Your Campaign</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li><a href="#">In-App Advertising</a></li>
+                        <li><a href="#">Off-App Advertising</a></li>
+                        <li><a href="#">Strategic Partnerships</a></li>
+                        <li><a href="#">Audience Targeting</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Whitepapers</a></li>
+                        <li><a href="#">Industry Reports</a></li>
+                        <li><a href="#">Webinars</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li><a href="tools.html#kit-generator">Media Kit Generator</a></li>
+                        <li><a href="tools.html#quiz">Marketer Quiz</a></li>
+                        <li><a href="tools.html#roi-calculator">ROI Calculator</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 pandaads. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

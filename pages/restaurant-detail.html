@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Name - foodpanda</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <div class="top-nav">
+        <div class="container">
+            <div class="top-nav-content">
+                <div class="top-left">
+                    <a href="#"><i class="fas fa-headset"></i> Contact Us</a>
+                    <div class="language-selector">
+                        <select>
+                            <option>EN</option>
+                            <option>FR</option>
+                            <option>DE</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="top-right">
+                    <a href="#"><i class="fas fa-mobile-alt"></i> Download App</a>
+                    <a href="profile.html"><i class="fas fa-user"></i> Account</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <h1>foodpanda</h1>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="restaurants.html" class="active">Restaurants</a></li>
+                        <li><a href="#">Deals</a></li>
+                        <li><a href="#">Panda Pro</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-container">
+                        <input type="text" placeholder="Search for restaurants or dishes...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                    <div class="auth-buttons">
+                        <button class="btn-login">Log in</button>
+                        <button class="btn-signup">Sign up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Restaurant Header -->
+    <section class="restaurant-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <div class="restaurant-hero">
+                        <img src="../images/restaurant-detail-hero.jpg" alt="Restaurant">
+                        <div class="favorite-btn">
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <div class="share-btn">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                    </div>
+
+                    <div class="restaurant-details">
+                        <div class="restaurant-name">
+                            <img src="../images/restaurant-logo-lg.png" alt="Restaurant Logo">
+                            <div>
+                                <h1>Spicy Hub</h1>
+                                <div class="restaurant-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.5 (248 reviews)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="restaurant-info-grid">
+                            <div class="info-item">
+                                <i class="fas fa-utensils"></i>
+                                <div>
+                                    <strong>Italian, Pasta, Pizza</strong>
+                                    <span>Cuisine</span>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <strong>25-35 min</strong>
+                                    <span>Delivery Time</span>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="fas fa-tag"></i>
+                                <div>
+                                    <strong>$10 min. order</strong>
+                                    <span>Minimum</span>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>1.2 km</strong>
+                                    <span>Distance</span>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="fas fa-dollar-sign"></i>
+                                <div>
+                                    <strong>Free delivery</strong>
+                                    <span>Fee</span>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="fas fa-store"></i>
+                                <div>
+                                    <strong>Opens at 08:00 AM</strong>
+                                    <span>Today</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-right">
+                    <div class="restaurant-status">
+                        <div class="status-indicator open"></div>
+                        <span>Open now</span>
+                    </div>
+
+                    <div class="delivery-info">
+                        <h3>Delivery Information</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, Pretoria</p>
+                        <p><i class="fas fa-clock"></i> Estimated delivery: 25-30 min</p>
+                    </div>
+
+                    <button class="btn-signup btn-order">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <section class="restaurant-nav">
+        <div class="container">
+            <div class="nav-tabs">
+                <button class="tab-btn active" data-tab="menu">Menu</button>
+                <button class="tab-btn" data-tab="about">About</button>
+                <button class="tab-btn" data-tab="reviews">Reviews</button>
+                <button class="tab-btn" data-tab="photos">Photos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Content -->
+    <section class="restaurant-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Menu Section -->
+                <div class="menu-section active" id="menu">
+                    <div class="menu-search">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search menu items...">
+                    </div>
+
+                    <div class="menu-categories">
+                        <div class="category-sidebar">
+                            <ul>
+                                <li class="active"><a href="#">All Items</a></li>
+                                <li><a href="#">Starters</a></li>
+                                <li><a href="#">Main Courses</a></li>
+                                <li><a href="#">Desserts</a></li>
+                                <li><a href="#">Drinks</a></li>
+                                <li><a href="#">Specials</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="menu-items">
+                            <div class="category-items" id="all-items">
+                                <h3>Starters</h3>
+
+                                <div class="menu-item">
+                                    <div class="item-image">
+                                        <img src="../images/menu-item1.jpg" alt="Menu Item">
+                                    </div>
+                                    <div class="item-details">
+                                        <h4>Garlic Bread</h4>
+                                        <p>Freshly baked bread with garlic butter</p>
+                                        <div class="item-info">
+                                            <span class="price">$8.99</span>
+                                            <div class="badges">
+                                                <span class="badge veg">Veg</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-actions">
+                                        <div class="quantity-selector">
+                                            <button class="quantity-minus">-</button>
+                                            <span class="quantity-amount">1</span>
+                                            <button class="quantity-plus">+</button>
+                                        </div>
+                                        <button class="btn-add-to-cart">Add</button>
+                                    </div>
+                                </div>
+
+                                <div class="menu-item">
+                                    <div class="item-image">
+                                        <img src="../images/menu-item2.jpg" alt="Menu Item">
+                                    </div>
+                                    <div class="item-details">
+                                        <h4>Bruschetta</h4>
+                                        <p>Toasted bread topped with tomatoes and basil</p>
+                                        <div class="item-info">
+                                            <span class="price">$10.99</span>
+                                            <div class="badges">
+                                                <span class="badge veg">Veg</span>
+                                                <span class="badge hot">Spicy</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-actions">
+                                        <div class="quantity-selector">
+                                            <button class="quantity-minus">-</button>
+                                            <span class="quantity-amount">1</span>
+                                            <button class="quantity-plus">+</button>
+                                        </div>
+                                        <button class="btn-add-to-cart">Add</button>
+                                    </div>
+                                </div>
+
+                                <h3>Main Courses</h3>
+
+                                <div class="menu-item">
+                                    <div class="item-image">
+                                        <img src="../images/menu-item3.jpg" alt="Menu Item">
+                                    </div>
+                                    <div class="item-details">
+                                        <h4>Chicken Alfredo</h4>
+                                        <p>Creamy pasta with grilled chicken</p>
+                                        <div class="item-info">
+                                            <span class="price">$18.99</span>
+                                            <div class="badges">
+                                                <span class="badge popular">Popular</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-actions">
+                                        <div class="quantity-selector">
+                                            <button class="quantity-minus">-</button>
+                                            <span class="quantity-amount">1</span>
+                                            <button class="quantity-plus">+</button>
+                                        </div>
+                                        <button class="btn-add-to-cart">Add</button>
+                                    </div>
+                                </div>
+
+                                <div class="menu-item">
+                                    <div class="item-image">
+                                        <img src="../images/menu-item4.jpg" alt="Menu Item">
+                                    </div>
+                                    <div class="item-details">
+                                        <h4>Spaghetti Bolognese</h4>
+                                        <p>Pasta with rich meat sauce</p>
+                                        <div class="item-info">
+                                            <span class="price">$16.99</span>
+                                            <div class="badges">
+                                                <span class="badge bestseller">Bestseller</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-actions">
+                                        <div class="quantity-selector">
+                                            <button class="quantity-minus">-</button>
+                                            <span class="quantity-amount">1</span>
+                                            <button class="quantity-plus">+</button>
+                                        </div>
+                                        <button class="btn-add-to-cart">Add</button>
+                                    </div>
+                                </div>
+
+                                <h3>Desserts</h3>
+
+                                <div class="menu-item">
+                                    <div class="item-image">
+                                        <img src="../images/menu-item5.jpg" alt="Menu Item">
+                                    </div>
+                                    <div class="item-details">
+                                        <h4>Tiramisu</h4>
+                                        <p>Classic Italian dessert with coffee and mascarpone</p>
+                                        <div class="item-info">
+                                            <span class="price">$7.99</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-actions">
+                                        <div class="quantity-selector">
+                                            <button class="quantity-minus">-</button>
+                                            <span class="quantity-amount">1</span>
+                                            <button class="quantity-plus">+</button>
+                                        </div>
+                                        <button class="btn-add-to-cart">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Section -->
+                <div class="about-section" id="about">
+                    <h2>About Spicy Hub</h2>
+                    <p>Founded in 2010, Spicy Hub has been serving authentic Italian cuisine to the community for over a decade. Our mission is to provide our customers with the tastiest and most authentic Italian dishes made with fresh, locally-sourced ingredients.</p>
+
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <h3>Opening Hours</h3>
+                            <ul>
+                                <li>Monday - Friday: 8:00 AM - 10:00 PM</li>
+                                <li>Saturday: 9:00 AM - 11:00 PM</li>
+                                <li>Sunday: 10:00 AM - 9:00 PM</li>
+                            </ul>
+                        </div>
+
+                        <div class="detail-item">
+                            <h3>Payment Options</h3>
+                            <ul>
+                                <li>Credit/Debit Cards</li>
+                                <li>Cash on Delivery</li>
+                                <li>Mobile Wallets</li>
+                            </ul>
+                        </div>
+
+                        <div class="detail-item">
+                            <h3>Special Features</h3>
+                            <ul>
+                                <li>Contactless Delivery</li>
+                                <li>Online Ordering</li>
+                                <li>Catering Services</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reviews Section -->
+                <div class="reviews-section" id="reviews">
+                    <h2>Customer Reviews</h2>
+                    <div class="reviews-summary">
+                        <div class="rating-summary">
+                            <div class="overall-rating">
+                                <span class="rating">4.5</span>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p>Based on 248 reviews</p>
+                            </div>
+
+                            <div class="rating-bars">
+                                <div class="rating-bar">
+                                    <span>5 Star</span>
+                                    <div class="bar">
+                                        <div class="fill" style="width: 70%"></div>
+                                    </div>
+                                    <span>174</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>4 Star</span>
+                                    <div class="bar">
+                                        <div class="fill" style="width: 15%"></div>
+                                    </div>
+                                    <span>37</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>3 Star</span>
+                                    <div class="bar">
+                                        <div class="fill" style="width: 8%"></div>
+                                    </div>
+                                    <span>20</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>2 Star</span>
+                                    <div class="bar">
+                                        <div class="fill" style="width: 4%"></div>
+                                    </div>
+                                    <span>10</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>1 Star</span>
+                                    <div class="bar">
+                                        <div class="fill" style="width: 3%"></div>
+                                    </div>
+                                    <span>7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reviews-list">
+                        <div class="review">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <div class="avatar">JD</div>
+                                    <div>
+                                        <h4>John Doe</h4>
+                                        <div class="review-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>Today</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="helpful-btn">Helpful <i class="far fa-thumbs-up"></i></button>
+                            </div>
+                            <p>The food was absolutely delicious! The chicken alfredo was perfectly cooked and the garlic bread was fresh. Delivery was on time too.</p>
+                        </div>
+
+                        <div class="review">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <div class="avatar">SJ</div>
+                                    <div>
+                                        <h4>Sarah Johnson</h4>
+                                        <div class="review-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <span>2 days ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="helpful-btn">Helpful <i class="far fa-thumbs-up"></i></button>
+                            </div>
+                            <p>Great service and food quality. The portions are generous and the flavors are authentic. Will order again!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photos Section -->
+                <div class="photos-section" id="photos">
+                    <h2>Restaurant Photos</h2>
+                    <div class="photos-grid">
+                        <div class="photo-item">
+                            <img src="../images/restaurant-interior1.jpg" alt="Restaurant Interior">
+                        </div>
+                        <div class="photo-item">
+                            <img src="../images/restaurant-interior2.jpg" alt="Restaurant Interior">
+                        </div>
+                        <div class="photo-item">
+                            <img src="../images/food1.jpg" alt="Food">
+                        </div>
+                        <div class="photo-item">
+                            <img src="../images/food2.jpg" alt="Food">
+                        </div>
+                        <div class="photo-item">
+                            <img src="../images/food3.jpg" alt="Food">
+                        </div>
+                        <div class="photo-item">
+                            <img src="../images/kitchen.jpg" alt="Kitchen">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shopping Cart Sidebar -->
+            <div class="cart-sidebar">
+                <div class="cart-header">
+                    <h3>Your Order</h3>
+                    <button class="close-cart"><i class="fas fa-times"></i></button>
+                </div>
+
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <div class="item-info">
+                            <h4>Chicken Alfredo</h4>
+                            <p>1x $18.99</p>
+                        </div>
+                        <div class="item-price">
+                            $18.99
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="item-info">
+                            <h4>Garlic Bread</h4>
+                            <p>1x $8.99</p>
+                        </div>
+                        <div class="item-price">
+                            $8.99
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-summary">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>$27.98</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Delivery Fee</span>
+                        <span>$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Service Fee</span>
+                        <span>$1.50</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span>$29.48</span>
+                    </div>
+                </div>
+
+                <div class="promo-code">
+                    <input type="text" placeholder="Enter promo code">
+                    <button class="btn-add">Apply</button>
+                </div>
+
+                <button class="btn-signup btn-checkout">Proceed to Checkout</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-section">
+                    <h3>Delivery & Support</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Delivery Calculator</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">Consumer Protection</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>About foodpanda</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>For Restaurants</h3>
+                    <ul>
+                        <li><a href="#">Partner With Us</a></li>
+                        <li><a href="#">Restaurant App</a></li>
+                        <li><a href="#">Business Solutions</a></li>
+                        <li><a href="#">Online Ordering</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 foodpanda All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

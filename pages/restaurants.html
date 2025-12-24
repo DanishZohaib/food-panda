@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants near you - foodpanda</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <div class="top-nav">
+        <div class="container">
+            <div class="top-nav-content">
+                <div class="top-left">
+                    <a href="#"><i class="fas fa-headset"></i> Contact Us</a>
+                    <div class="language-selector">
+                        <select>
+                            <option>EN</option>
+                            <option>FR</option>
+                            <option>DE</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="top-right">
+                    <a href="#"><i class="fas fa-mobile-alt"></i> Download App</a>
+                    <a href="profile.html"><i class="fas fa-user"></i> Account</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <h1>foodpanda</h1>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#" class="active">Restaurants</a></li>
+                        <li><a href="#">Deals</a></li>
+                        <li><a href="#">Panda Pro</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-container">
+                        <input type="text" placeholder="Search for restaurants or dishes...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                    <div class="auth-buttons">
+                        <button class="btn-login">Log in</button>
+                        <button class="btn-signup">Sign up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search and Filters Section -->
+    <section class="search-filters">
+        <div class="container">
+            <div class="search-bar">
+                <div class="location-display">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Pretoria, South Africa</span>
+                    <button class="change-location">Change</button>
+                </div>
+
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for restaurants or cuisines...">
+                </div>
+            </div>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <h4>Cuisine</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="cuisine" value="italian"> Italian
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="cuisine" value="chinese"> Chinese
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="cuisine" value="indian"> Indian
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="cuisine" value="mexican"> Mexican
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="cuisine" value="fastfood"> Fast Food
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Dietary</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="dietary" value="vegetarian"> Vegetarian
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="dietary" value="vegan"> Vegan
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="dietary" value="gluten"> Gluten-free
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Price Range</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="radio" name="price" value="1"> $ (Under $10)
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="price" value="2"> $$ ($10-$20)
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="price" value="3"> $$$ ($20-$30)
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="price" value="4"> $$$$ ($30+)
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Delivery Time</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="radio" name="time" value="15"> Under 15 min
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="time" value="25"> Under 25 min
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="time" value="35"> Under 35 min
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-actions">
+                    <button class="btn-login">Reset Filters</button>
+                    <button class="btn-signup">Apply Filters</button>
+                </div>
+            </div>
+
+            <div class="sort-options">
+                <div class="sort-control">
+                    <label for="sort-by">Sort by:</label>
+                    <select id="sort-by">
+                        <option value="relevance">Relevance</option>
+                        <option value="rating">Rating</option>
+                        <option value="delivery-time">Delivery Time</option>
+                        <option value="distance">Distance</option>
+                    </select>
+                </div>
+
+                <div class="toggle-views">
+                    <button class="view-btn active"><i class="fas fa-th-large"></i></button>
+                    <button class="view-btn"><i class="fas fa-list"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Listings -->
+    <section class="restaurant-listings">
+        <div class="container">
+            <div class="results-info">
+                <h3>24 restaurants available</h3>
+                <div class="open-now-toggle">
+                    <label class="toggle-switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                    <span>Open now</span>
+                </div>
+            </div>
+
+            <div class="restaurant-grid">
+                <div class="restaurant-card">
+                    <div class="restaurant-image">
+                        <img src="../images/restaurant1.jpg" alt="Restaurant">
+                        <div class="restaurant-logo">
+                            <img src="../images/restaurant-logo1.png" alt="Logo">
+                        </div>
+                        <div class="favorite-btn">
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>Spicy Hub</h3>
+                        <div class="cuisine-tags">
+                            <span class="tag">Italian</span>
+                            <span class="tag">Pasta</span>
+                        </div>
+                        <div class="restaurant-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.5 (248)</span>
+                        </div>
+                        <div class="restaurant-details">
+                            <span><i class="fas fa-clock"></i> 25 min</span>
+                            <span><i class="fas fa-tag"></i> Min: $10</span>
+                            <span><i class="fas fa-dollar-sign delivery-fee">Free delivery</span>
+                        </div>
+                        <div class="distance">
+                            <i class="fas fa-map-marker-alt"></i> 1.2 km
+                        </div>
+                        <div class="discount-badge">20% OFF</div>
+                    </div>
+                    <div class="restaurant-status open">Open</div>
+                </div>
+
+                <div class="restaurant-card">
+                    <div class="restaurant-image">
+                        <img src="../images/restaurant2.jpg" alt="Restaurant">
+                        <div class="restaurant-logo">
+                            <img src="../images/restaurant-logo2.png" alt="Logo">
+                        </div>
+                        <div class="favorite-btn">
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>Burger Palace</h3>
+                        <div class="cuisine-tags">
+                            <span class="tag">American</span>
+                            <span class="tag">Burgers</span>
+                        </div>
+                        <div class="restaurant-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.7 (312)</span>
+                        </div>
+                        <div class="restaurant-details">
+                            <span><i class="fas fa-clock"></i> 30 min</span>
+                            <span><i class="fas fa-tag"></i> Min: $15</span>
+                            <span><i class="fas fa-dollar-sign"></i> R5 delivery</span>
+                        </div>
+                        <div class="distance">
+                            <i class="fas fa-map-marker-alt"></i> 0.8 km
+                        </div>
+                    </div>
+                    <div class="restaurant-status open">Open</div>
+                </div>
+
+                <div class="restaurant-card">
+                    <div class="restaurant-image">
+                        <img src="../images/restaurant3.jpg" alt="Restaurant">
+                        <div class="restaurant-logo">
+                            <img src="../images/restaurant-logo3.png" alt="Logo">
+                        </div>
+                        <div class="favorite-btn">
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>Sushi Express</h3>
+                        <div class="cuisine-tags">
+                            <span class="tag">Japanese</span>
+                            <span class="tag">Sushi</span>
+                        </div>
+                        <div class="restaurant-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.3 (198)</span>
+                        </div>
+                        <div class="restaurant-details">
+                            <span><i class="fas fa-clock"></i> 35 min</span>
+                            <span><i class="fas fa-tag"></i> Min: $20</span>
+                            <span><i class="fas fa-dollar-sign"></i> R8 delivery</span>
+                        </div>
+                        <div class="distance">
+                            <i class="fas fa-map-marker-alt"></i> 2.1 km
+                        </div>
+                        <div class="discount-badge">15% OFF</div>
+                    </div>
+                    <div class="restaurant-status open">Open</div>
+                </div>
+
+                <div class="restaurant-card">
+                    <div class="restaurant-image">
+                        <img src="../images/restaurant4.jpg" alt="Restaurant">
+                        <div class="restaurant-logo">
+                            <img src="../images/restaurant-logo4.png" alt="Logo">
+                        </div>
+                        <div class="favorite-btn">
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>Taco Fiesta</h3>
+                        <div class="cuisine-tags">
+                            <span class="tag">Mexican</span>
+                            <span class="tag">Tacos</span>
+                        </div>
+                        <div class="restaurant-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.6 (156)</span>
+                        </div>
+                        <div class="restaurant-details">
+                            <span><i class="fas fa-clock"></i> 22 min</span>
+                            <span><i class="fas fa-tag"></i> Min: $12</span>
+                            <span><i class="fas fa-dollar-sign"></i> R6 delivery</span>
+                        </div>
+                        <div class="distance">
+                            <i class="fas fa-map-marker-alt"></i> 1.5 km
+                        </div>
+                    </div>
+                    <div class="restaurant-status">Closed</div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="btn-login">Previous</button>
+                <button class="btn-signup">1</button>
+                <button class="btn-login">2</button>
+                <button class="btn-login">3</button>
+                <button class="btn-login">Next</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-section">
+                    <h3>Delivery & Support</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Delivery Calculator</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">Consumer Protection</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>About foodpanda</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>For Restaurants</h3>
+                    <ul>
+                        <li><a href="#">Partner With Us</a></li>
+                        <li><a href="#">Restaurant App</a></li>
+                        <li><a href="#">Business Solutions</a></li>
+                        <li><a href="#">Online Ordering</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 foodpanda All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

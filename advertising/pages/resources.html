@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - pandaads</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .ad-platform header {
+            background-color: var(--dark-gray);
+        }
+
+        .ad-platform .logo h1 {
+            color: var(--white);
+        }
+
+        .ad-platform nav ul li a {
+            color: var(--white);
+        }
+
+        .ad-platform .btn-login {
+            color: var(--white);
+        }
+
+        .ad-platform .btn-signup {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        .resources-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .resources-hero h1 {
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .resources-hero p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .resources-filters {
+            background: var(--light-gray);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            border: 1px solid var(--light-gray-alt);
+            background-color: var(--white);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+
+        .resources-content {
+            padding: 60px 0;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .resource-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .resource-image {
+            height: 180px;
+            background: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 3rem;
+        }
+
+        .resource-content {
+            padding: 25px;
+        }
+
+        .resource-tag {
+            display: inline-block;
+            background: var(--light-gray);
+            color: var(--dark-gray);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+        }
+
+        .resource-content h3 {
+            color: var(--dark-gray);
+            margin-bottom: 10px;
+        }
+
+        .resource-excerpt {
+            color: var(--gray);
+            margin-bottom: 15px;
+        }
+
+        .resource-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--light-gray);
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+
+        .ad-platform footer {
+            background-color: var(--dark-gray);
+        }
+
+        @media (max-width: 768px) {
+            .resources-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .filter-buttons {
+                gap: 8px;
+            }
+
+            .filter-btn {
+                padding: 6px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body class="ad-platform">
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>pandaads</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="solutions.html">Solutions</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="#" class="active">Resources</a></li>
+                        <li><a href="tools.html">Tools</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn-login">Log In</button>
+                    <button class="btn-signup">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Resources Hero -->
+    <section class="resources-hero">
+        <div class="container">
+            <h1>Advertising Resources</h1>
+            <p>Insights, guides, and tools to help you make the most of our advertising platform</p>
+        </div>
+    </section>
+
+    <!-- Resource Filters -->
+    <section class="resources-filters">
+        <div class="container">
+            <h3>Filter Resources</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Blog</button>
+                <button class="filter-btn">Whitepapers</button>
+                <button class="filter-btn">Industry Reports</button>
+                <button class="filter-btn">Webinars</button>
+                <button class="filter-btn">Guides</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Content -->
+    <section class="resources-content">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Resources</h2>
+                <p>Latest insights and educational content</p>
+            </div>
+
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <i class="fas fa-blog"></i>
+                    </div>
+                    <div class="resource-content">
+                        <span class="resource-tag">Blog</span>
+                        <h3>The Future of Retail Media in Food Delivery</h3>
+                        <p class="resource-excerpt">Exploring the growing influence of retail media networks in the food delivery industry and how brands can leverage these platforms.</p>
+                        <div class="resource-meta">
+                            <span><i class="far fa-calendar"></i> Dec 15, 2024</span>
+                            <span><i class="far fa-clock"></i> 5 min read</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="resource-content">
+                        <span class="resource-tag">Whitepaper</span>
+                        <h3>ROI Optimization for Food & Beverage Brands</h3>
+                        <p class="resource-excerpt">A comprehensive guide to maximizing ROI through strategic advertising placement and audience targeting on food delivery platforms.</p>
+                        <div class="resource-meta">
+                            <span><i class="far fa-calendar"></i> Nov 28, 2024</span>
+                            <span><i class="fas fa-file-download"></i> PDF</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="resource-content">
+                        <span class="resource-tag">Industry Report</span>
+                        <h3>Q4 2024 Food Delivery Advertising Trends</h3>
+                        <p class="resource-excerpt">Analyze the latest advertising trends in the food delivery space with data-driven insights and predictions for 2025.</p>
+                        <div class="resource-meta">
+                            <span><i class="far fa-calendar"></i> Nov 10, 2024</span>
+                            <span><i class="fas fa-file-download"></i> PDF</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="resource-content">
+                        <span class="resource-tag">Webinar</span>
+                        <h3>Advanced Targeting Strategies for Q1 2025</h3>
+                        <p class="resource-excerpt">Join our experts for a live session on how to effectively target your ideal customers during the busy New Year period.</p>
+                        <div class="resource-meta">
+                            <span><i class="far fa-calendar"></i> Jan 15, 2025</span>
+                            <span><i class="far fa-clock"></i> 60 min</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="resource-content">
+                        <span class="resource-tag">Guide</span>
+                        <h3>Beginner's Guide to Campaign Management</h3>
+                        <p class="resource-excerpt">A step-by-step guide for new advertisers on how to set up, manage, and optimize their advertising campaigns.</p>
+                        <div class="resource-meta">
+                            <span><i class="far fa-calendar"></i> Oct 22, 2024</span>
+                            <span><i class="fas fa-file-download"></i> PDF</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <div class="resource-content">
+                        <span class="resource-tag">Blog</span>
+                        <h3>Seasonal Advertising: Maximizing Holiday Sales</h3>
+                        <p class="resource-excerpt">Learn how to adjust your advertising strategy during peak seasonal periods to capture maximum value.</p>
+                        <div class="resource-meta">
+                            <span><i class="far fa-calendar"></i> Dec 1, 2024</span>
+                            <span><i class="far fa-clock"></i> 7 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="app-download" style="margin: 80px 0; background: var(--light-gray);">
+        <div class="container">
+            <div class="app-content" style="flex-direction: column; text-align: center;">
+                <div class="app-text">
+                    <h2>Want more insights?</h2>
+                    <p>Subscribe to our newsletter to receive the latest resources and industry insights.</p>
+                    <button class="btn btn-primary" style="margin-top: 20px;">Subscribe Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li><a href="#">In-App Advertising</a></li>
+                        <li><a href="#">Off-App Advertising</a></li>
+                        <li><a href="#">Strategic Partnerships</a></li>
+                        <li><a href="#">Audience Targeting</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Whitepapers</a></li>
+                        <li><a href="#">Industry Reports</a></li>
+                        <li><a href="#">Webinars</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li><a href="tools.html#kit-generator">Media Kit Generator</a></li>
+                        <li><a href="tools.html#quiz">Marketer Quiz</a></li>
+                        <li><a href="tools.html#roi-calculator">ROI Calculator</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 pandaads. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // In a real implementation, this would filter the resources
+                    console.log(`Filtering by: ${this.textContent}`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
