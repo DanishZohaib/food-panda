@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools - pandaads</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .ad-platform header {
+            background-color: var(--dark-gray);
+        }
+
+        .ad-platform .logo h1 {
+            color: var(--white);
+        }
+
+        .ad-platform nav ul li a {
+            color: var(--white);
+        }
+
+        .ad-platform .btn-login {
+            color: var(--white);
+        }
+
+        .ad-platform .btn-signup {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        .tools-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .tools-hero h1 {
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .tools-hero p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .tools-content {
+            padding: 80px 0;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 50px;
+            margin-top: 50px;
+        }
+
+        .tool-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .tool-icon {
+            height: 200px;
+            background: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 4rem;
+        }
+
+        .tool-content {
+            padding: 30px;
+        }
+
+        .tool-content h3 {
+            color: var(--dark-gray);
+            margin-bottom: 15px;
+        }
+
+        .tool-content p {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
+        .media-kit-form {
+            background: var(--light-gray);
+            padding: 40px;
+            border-radius: 10px;
+            margin: 50px 0;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark-gray);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--light-gray-alt);
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .preview-section {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 2px dashed var(--light-gray-alt);
+            text-align: center;
+        }
+
+        .preview-content {
+            padding: 20px;
+            background: var(--light-gray);
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .marketer-quiz {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            margin: 50px 0;
+        }
+
+        .quiz-question {
+            margin-bottom: 30px;
+        }
+
+        .quiz-question h4 {
+            margin-bottom: 15px;
+            color: var(--dark-gray);
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .quiz-option {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            border: 1px solid var(--light-gray-alt);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .quiz-option:hover {
+            border-color: var(--primary-color);
+            background-color: rgba(215, 15, 100, 0.05);
+        }
+
+        .quiz-option input {
+            margin-right: 10px;
+        }
+
+        .progress-container {
+            margin: 20px 0;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: var(--light-gray-alt);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--primary-color);
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        .quiz-result {
+            display: none;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .result-icon {
+            font-size: 5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .ad-platform footer {
+            background-color: var(--dark-gray);
+        }
+
+        @media (max-width: 768px) {
+            .tools-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="ad-platform">
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>pandaads</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="solutions.html">Solutions</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="#" class="active">Tools</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn-login">Log In</button>
+                    <button class="btn-signup">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Tools Hero -->
+    <section class="tools-hero">
+        <div class="container">
+            <h1>Advertising Tools</h1>
+            <p>Interactive tools to help you plan, manage, and optimize your advertising campaigns</p>
+        </div>
+    </section>
+
+    <!-- Tools Content -->
+    <section class="tools-content">
+        <div class="container">
+            <div class="section-header">
+                <h2>Available Tools</h2>
+                <p>Resources designed to make your advertising experience easier</p>
+            </div>
+
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>Media Kit Generator</h3>
+                        <p>Create customized media kits for your advertising campaigns with our easy-to-use generator.</p>
+                        <button class="btn btn-primary">Use Tool</button>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>Marketer Personality Quiz</h3>
+                        <p>Discover your advertising style and get personalized recommendations for your campaigns.</p>
+                        <button class="btn btn-primary">Start Quiz</button>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>ROI Calculator</h3>
+                        <p>Estimate your potential return on investment based on different advertising strategies.</p>
+                        <button class="btn btn-primary">Calculate</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Media Kit Generator -->
+            <div class="media-kit-form" id="kit-generator">
+                <h2>Media Kit Generator</h2>
+                <p>Fill out the form below to create your customized media kit</p>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="campaign-name">Campaign Name</label>
+                        <input type="text" id="campaign-name" placeholder="e.g., Summer Campaign 2025">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="target-audience">Target Audience</label>
+                        <input type="text" id="target-audience" placeholder="e.g., Young Professionals">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Estimated Budget ($)</label>
+                        <input type="number" id="budget" placeholder="e.g., 5000">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="duration">Campaign Duration</label>
+                        <select id="duration">
+                            <option>1 month</option>
+                            <option>3 months</option>
+                            <option>6 months</option>
+                            <option>12 months</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" style="grid-column: span 2;">
+                        <label for="ad-formats">Ad Formats</label>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+                            <label style="display: flex; align-items: center;">
+                                <input type="checkbox" style="margin-right: 8px;"> Homepage Banner
+                            </label>
+                            <label style="display: flex; align-items: center;">
+                                <input type="checkbox" style="margin-right: 8px;"> Search Ads
+                            </label>
+                            <label style="display: flex; align-items: center;">
+                                <input type="checkbox" style="margin-right: 8px;"> Push Notifications
+                            </label>
+                            <label style="display: flex; align-items: center;">
+                                <input type="checkbox" style="margin-right: 8px;"> In-App Pop-ups
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="grid-column: span 2;">
+                        <label for="objectives">Campaign Objectives</label>
+                        <textarea id="objectives" placeholder="Describe your campaign objectives..."></textarea>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary">Generate Media Kit</button>
+
+                <div class="preview-section">
+                    <h3>Preview</h3>
+                    <div class="preview-content">
+                        <p>Generated Media Kit Preview</p>
+                        <p>Click "Generate Media Kit" to see your customized kit</p>
+                    </div>
+                    <button class="btn btn-secondary" style="margin-top: 10px;">Download Kit</button>
+                </div>
+            </div>
+
+            <!-- Marketer Personality Quiz -->
+            <div class="marketer-quiz" id="quiz">
+                <h2>Marketer Personality Quiz</h2>
+                <p>Find your advertising style in just 5 questions</p>
+
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="quiz-progress"></div>
+                    </div>
+                    <p>Question <span id="current-question">1</span> of 5</p>
+                </div>
+
+                <div id="quiz-questions">
+                    <div class="quiz-question">
+                        <h4>1. What is your primary goal when starting a new campaign?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q1" value="a"> Maximize brand awareness
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q1" value="b"> Generate immediate sales
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q1" value="c"> Build customer relationships
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q1" value="d"> Test new markets
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <h4>2. Which metric matters most to you?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q2" value="a"> Brand recall
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q2" value="b"> Conversion rate
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q2" value="c"> Customer lifetime value
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q2" value="d"> Market share
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <h4>3. How do you prefer to allocate your budget?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q3" value="a"> Even across all channels
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q3" value="b"> Heavily in top-performing channels
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q3" value="c"> Based on customer journey
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q3" value="d"> Test different allocations
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <h4>4. What's your approach to campaign optimization?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q4" value="a"> Continuous A/B testing
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4" value="b"> Data-driven adjustments
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4" value="c"> Customer feedback-driven
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4" value="d"> Strategic pivots based on trends
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <h4>5. How often do you evaluate campaign performance?</h4>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q5" value="a"> Daily
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q5" value="b"> Weekly
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q5" value="c"> Monthly
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q5" value="d"> Quarterly
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="quiz-result" class="quiz-result">
+                    <div class="result-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Your Marketing Personality</h3>
+                    <h4 id="result-title">Data-Driven Strategist</h4>
+                    <p id="result-description">You focus on metrics and KPIs to drive your advertising strategies. You make decisions based on data analysis and are always looking for ways to optimize performance.</p>
+                    <p>Recommended Solutions: <span id="result-solutions">Audience Targeting, In-App Advertising, Performance Analytics</span></p>
+                    <button class="btn btn-primary" onclick="location.reload()">Take Again</button>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="btn btn-primary" id="submit-quiz">Get Results</button>
+                    <button class="btn btn-secondary" onclick="location.reload()">Reset Quiz</button>
+                </div>
+            </div>
+
+            <!-- ROI Calculator -->
+            <div class="marketer-quiz" id="roi-calculator">
+                <h2>ROI Calculator</h2>
+                <p>Estimate your potential return on investment</p>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="ad-spend">Advertising Spend ($)</label>
+                        <input type="number" id="ad-spend" placeholder="Enter your ad spend">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="conversion-rate">Conversion Rate (%)</label>
+                        <input type="number" id="conversion-rate" placeholder="Enter conversion rate" step="0.01">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="avg-order-value">Average Order Value ($)</label>
+                        <input type="number" id="avg-order-value" placeholder="Enter average order value">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-lifetime">Customer Lifetime (months)</label>
+                        <input type="number" id="customer-lifetime" placeholder="Enter average lifetime">
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" onclick="calculateROI()">Calculate ROI</button>
+
+                <div id="roi-result" style="margin-top: 20px; padding: 15px; background: var(--light-gray); border-radius: 5px; display: none;">
+                    <h3>Your Estimated ROI</h3>
+                    <p id="roi-value"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="app-download" style="margin: 80px 0; background: var(--light-gray);">
+        <div class="container">
+            <div class="app-content" style="flex-direction: column; text-align: center;">
+                <div class="app-text">
+                    <h2>Need more assistance?</h2>
+                    <p>Our advertising experts are here to help you make the most of our tools.</p>
+                    <button class="btn btn-primary" style="margin-top: 20px;">Contact an Expert</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li><a href="#">In-App Advertising</a></li>
+                        <li><a href="#">Off-App Advertising</a></li>
+                        <li><a href="#">Strategic Partnerships</a></li>
+                        <li><a href="#">Audience Targeting</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Whitepapers</a></li>
+                        <li><a href="#">Industry Reports</a></li>
+                        <li><a href="#">Webinars</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="resources.html">Case Studies</a></li>
+                        <li><a href="resources.html">Whitepapers</a></li>
+                        <li><a href="resources.html">Industry Reports</a></li>
+                        <li><a href="resources.html">Webinars</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 pandaads. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Quiz functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const quizQuestions = document.querySelectorAll('.quiz-question');
+            const submitBtn = document.getElementById('submit-quiz');
+            const quizResult = document.getElementById('quiz-result');
+            const currentQuestionSpan = document.getElementById('current-question');
+            const progressFill = document.getElementById('quiz-progress');
+            let currentQuestion = 0;
+
+            // Update question counter and progress bar
+            function updateProgress() {
+                currentQuestionSpan.textContent = currentQuestion + 1;
+                progressFill.style.width = `${((currentQuestion + 1) / quizQuestions.length) * 100}%`;
+            }
+
+            // Show the current question
+            function showQuestion() {
+                quizQuestions.forEach((question, index) => {
+                    question.style.display = 'none';
+                    if (index === currentQuestion) {
+                        question.style.display = 'block';
+                    }
+                });
+                updateProgress();
+            }
+
+            // Check if all questions are answered
+            function allQuestionsAnswered() {
+                for (let i = 0; i < quizQuestions.length; i++) {
+                    const inputs = quizQuestions[i].querySelectorAll('input[type="radio"]');
+                    let checked = false;
+                    for (let j = 0; j < inputs.length; j++) {
+                        if (inputs[j].checked) {
+                            checked = true;
+                            break;
+                        }
+                    }
+                    if (!checked) return false;
+                }
+                return true;
+            }
+
+            // Handle quiz submission
+            submitBtn.addEventListener('click', function() {
+                if (!allQuestionsAnswered()) {
+                    alert('Please answer all questions before submitting');
+                    return;
+                }
+
+                // Show result
+                quizResult.style.display = 'block';
+
+                // Scroll to results
+                quizResult.scrollIntoView({ behavior: 'smooth' });
+            });
+
+            // Initialize the first question
+            showQuestion();
+        });
+
+        // ROI Calculator functionality
+        function calculateROI() {
+            const adSpend = parseFloat(document.getElementById('ad-spend').value) || 0;
+            const conversionRate = parseFloat(document.getElementById('conversion-rate').value) || 0;
+            const avgOrderValue = parseFloat(document.getElementById('avg-order-value').value) || 0;
+            const customerLifetime = parseFloat(document.getElementById('customer-lifetime').value) || 12;
+
+            if (adSpend <= 0) {
+                alert('Please enter a valid advertising spend');
+                return;
+            }
+
+            // Simple ROI calculation
+            // Project revenue based on ad spend, conversion rate, and customer behavior
+            const customersAcquired = (adSpend * conversionRate) / 100;
+            const totalRevenue = customersAcquired * avgOrderValue * customerLifetime;
+            const roi = ((totalRevenue - adSpend) / adSpend) * 100;
+
+            const roiResult = document.getElementById('roi-result');
+            const roiValue = document.getElementById('roi-value');
+
+            roiValue.innerHTML = `
+                <strong>Customers Acquired:</strong> ${customersAcquired.toFixed(0)}<br>
+                <strong>Total Projected Revenue:</strong> $${totalRevenue.toFixed(2)}<br>
+                <strong>Return on Investment (ROI):</strong> ${roi.toFixed(2)}%
+            `;
+
+            roiResult.style.display = 'block';
+            roiResult.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pandaads - Reach millions with panda ads</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Advertising-specific styles */
+        .ad-platform header {
+            background-color: var(--dark-gray);
+        }
+
+        .ad-platform .logo h1 {
+            color: var(--white);
+        }
+
+        .ad-platform nav ul li a {
+            color: var(--white);
+        }
+
+        .ad-platform .btn-login {
+            color: var(--white);
+        }
+
+        .ad-platform .btn-signup {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        .ad-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .ad-hero h1 {
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .ad-hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stats-section {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .stat-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--dark-gray);
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--gray);
+        }
+
+        .value-props {
+            padding: 100px 0;
+        }
+
+        .value-props-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            align-items: center;
+        }
+
+        .value-prop {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .value-prop-img {
+            width: 100%;
+            max-width: 300px;
+            height: 200px;
+            background: var(--light-gray);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-size: 3rem;
+        }
+
+        .value-prop h3 {
+            margin-bottom: 15px;
+            color: var(--dark-gray);
+        }
+
+        .ad-platform footer {
+            background-color: var(--dark-gray);
+        }
+
+        @media (max-width: 768px) {
+            .ad-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .value-props-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="ad-platform">
+    <!-- Top Navigation Bar -->
+    <div class="top-nav">
+        <div class="container">
+            <div class="top-nav-content">
+                <div class="top-left">
+                    <a href="#"><i class="fas fa-headset"></i> Contact Us</a>
+                    <div class="language-selector">
+                        <select>
+                            <option>EN</option>
+                            <option>FR</option>
+                            <option>DE</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="top-right">
+                    <a href="#"><i class="fas fa-mobile-alt"></i> Download App</a>
+                    <a href="../pages/profile.html"><i class="fas fa-user"></i> Account</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <h1>pandaads</h1>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="pages/solutions.html">Solutions</a></li>
+                        <li><a href="pages/case-studies.html">Case Studies</a></li>
+                        <li><a href="pages/resources.html">Resources</a></li>
+                        <li><a href="pages/tools.html">Tools</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-container">
+                        <input type="text" placeholder="Search for solutions...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="auth-buttons">
+                        <button class="btn-login">Log in</button>
+                        <button class="btn-signup">Sign up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="ad-hero">
+        <div class="container">
+            <h1>Reach millions with panda ads</h1>
+            <p>Advertise with foodpanda and connect with millions of ready-to-shop customers across Asia. Maximize your reach with our powerful retail media solutions.</p>
+            <button class="btn btn-secondary">Get in touch</button>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <div class="stat-number">125M+</div>
+                    <div class="stat-label">App Downloads</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="stat-number">11</div>
+                    <div class="stat-label">Markets</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <div class="stat-number">400+</div>
+                    <div class="stat-label">Cities</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number">XM+</div>
+                    <div class="stat-label">Monthly Active Users</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Propositions -->
+    <section class="value-props">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why choose pandaads?</h2>
+                <p>Powerful advertising solutions for your business</p>
+            </div>
+
+            <div class="value-props-grid">
+                <div class="value-prop">
+                    <div class="value-prop-img">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Maximise Your Reach</h3>
+                    <p>Access millions of engaged customers actively looking for food and dining options. Our platform provides unprecedented reach across diverse markets and demographics.</p>
+                </div>
+
+                <div class="value-prop">
+                    <div class="value-prop-img">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3>Engage High-Value Audiences</h3>
+                    <p>Connect with customers at the right moment when they're ready to make a purchase. Target precise audiences based on location, behavior, and preferences.</p>
+                </div>
+
+                <div class="value-prop">
+                    <div class="value-prop-img">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Get Personalised Support</h3>
+                    <p>Work with our dedicated account managers to create custom campaigns that meet your specific business objectives and deliver measurable results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="app-download" style="margin: 80px 0;">
+        <div class="container">
+            <div class="app-content" style="flex-direction: column; text-align: center;">
+                <div class="app-text">
+                    <h2>Ready to grow your business?</h2>
+                    <p>Join hundreds of brands already seeing results with pandaads.</p>
+                    <button class="btn btn-primary" style="margin-top: 20px;">Schedule a Demo</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-section">
+                    <h3>Delivery & Support</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Delivery Calculator</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">Consumer Protection</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>About foodpanda</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>For Restaurants</h3>
+                    <ul>
+                        <li><a href="#">Partner With Us</a></li>
+                        <li><a href="#">Restaurant App</a></li>
+                        <li><a href="#">Business Solutions</a></li>
+                        <li><a href="#">Online Ordering</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 pandaads. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

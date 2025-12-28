@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertising Solutions - pandaads</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .ad-platform header {
+            background-color: var(--dark-gray);
+        }
+
+        .ad-platform .logo h1 {
+            color: var(--white);
+        }
+
+        .ad-platform nav ul li a {
+            color: var(--white);
+        }
+
+        .ad-platform .btn-login {
+            color: var(--white);
+        }
+
+        .ad-platform .btn-signup {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        .ad-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .ad-hero h1 {
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .ad-hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .solutions-section {
+            padding: 80px 0;
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .solution-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .solution-image {
+            height: 200px;
+            background: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 4rem;
+        }
+
+        .solution-content {
+            padding: 30px;
+        }
+
+        .solution-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--dark-gray);
+        }
+
+        .solution-features {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .solution-features li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .solution-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .ad-platform footer {
+            background-color: var(--dark-gray);
+        }
+
+        @media (max-width: 768px) {
+            .ad-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .solutions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="ad-platform">
+    <!-- Top Navigation Bar -->
+    <div class="top-nav">
+        <div class="container">
+            <div class="top-nav-content">
+                <div class="top-left">
+                    <a href="#"><i class="fas fa-headset"></i> Contact Us</a>
+                    <div class="language-selector">
+                        <select>
+                            <option>EN</option>
+                            <option>FR</option>
+                            <option>DE</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="top-right">
+                    <a href="#"><i class="fas fa-mobile-alt"></i> Download App</a>
+                    <a href="../pages/profile.html"><i class="fas fa-user"></i> Account</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <h1>pandaads</h1>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#" class="active">Solutions</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="tools.html">Tools</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-container">
+                        <input type="text" placeholder="Search for solutions...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="auth-buttons">
+                        <button class="btn-login">Log in</button>
+                        <button class="btn-signup">Sign up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Solutions Hero -->
+    <section class="ad-hero">
+        <div class="container">
+            <h1>Advertising Solutions</h1>
+            <p>Comprehensive advertising products designed to help brands reach their target audience and achieve their marketing objectives</p>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="solutions-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Advertising Solutions</h2>
+                <p>Powerful advertising products tailored to your business needs</p>
+            </div>
+
+            <div class="solutions-grid">
+                <div class="solution-card" id="in-app">
+                    <div class="solution-image">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="solution-content">
+                        <h3>In-App Advertising</h3>
+                        <p>Connect with customers directly within the foodpanda app experience, capturing their attention when they're most engaged and ready to order.</p>
+
+                        <ul class="solution-features">
+                            <li>Homepage and category banners</li>
+                            <li>Targeted restaurant listing ads</li>
+                            <li>Search and discovery placements</li>
+                            <li>In-app pop-ups and notifications</li>
+                            <li>Push notification campaigns</li>
+                        </ul>
+
+                        <button class="btn btn-primary">Explore Solutions</button>
+                    </div>
+                </div>
+
+                <div class="solution-card" id="off-app">
+                    <div class="solution-image">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                    <div class="solution-content">
+                        <h3>Off-App Advertising</h3>
+                        <p>Extend your brand's reach beyond the app with strategic advertising across our ecosystem and partner networks.</p>
+
+                        <ul class="solution-features">
+                            <li>Email marketing campaigns</li>
+                            <li>Social media advertisements</li>
+                            <li>Rider bag branding</li>
+                            <li>Product sampling programs</li>
+                            <li>SMS marketing solutions</li>
+                        </ul>
+
+                        <button class="btn btn-primary">Explore Solutions</button>
+                    </div>
+                </div>
+
+                <div class="solution-card" id="partnerships">
+                    <div class="solution-image">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="solution-content">
+                        <h3>Strategic Partnerships</h3>
+                        <p>Collaborate with foodpanda to create unique, co-branded experiences that provide mutual value to both brands and customers.</p>
+
+                        <ul class="solution-features">
+                            <li>Co-marketing campaigns</li>
+                            <li>Exclusive promotions and deals</li>
+                            <li>Content partnerships</li>
+                            <li>Event sponsorships</li>
+                            <li>Integrated customer experiences</li>
+                        </ul>
+
+                        <button class="btn btn-primary">Explore Solutions</button>
+                    </div>
+                </div>
+
+                <div class="solution-card" id="targeting">
+                    <div class="solution-image">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <div class="solution-content">
+                        <h3>Audience Targeting</h3>
+                        <p>Leverage first-party data and advanced targeting capabilities to reach your ideal customers with precision.</p>
+
+                        <ul class="solution-features">
+                            <li>Demographic targeting</li>
+                            <li>Behavioral segmentation</li>
+                            <li>Location-based targeting</li>
+                            <li>Purchase history targeting</li>
+                            <li>Lookalike audience modeling</li>
+                        </ul>
+
+                        <button class="btn btn-primary">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="app-download" style="margin: 80px 0; background: var(--light-gray);">
+        <div class="container">
+            <div class="app-content" style="flex-direction: column; text-align: center;">
+                <div class="app-text">
+                    <h2>Find the right solution for your brand</h2>
+                    <p>Our advertising experts will help you choose the best solutions to meet your marketing objectives.</p>
+                    <button class="btn btn-primary" style="margin-top: 20px;">Get Started Today</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-section">
+                    <h3>Delivery & Support</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Delivery Calculator</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">Consumer Protection</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>About foodpanda</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>For Restaurants</h3>
+                    <ul>
+                        <li><a href="#">Partner With Us</a></li>
+                        <li><a href="#">Restaurant App</a></li>
+                        <li><a href="#">Business Solutions</a></li>
+                        <li><a href="#">Online Ordering</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 pandaads. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

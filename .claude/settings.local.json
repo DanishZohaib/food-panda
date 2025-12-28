@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /s)",
+      "Bash(dir)",
+      "Bash(dir /s /b)",
+      "Bash(powershell Get-ChildItem -Recurse)",
+      "WebSearch",
+      "Bash(dir pages)",
+      "Bash(dir advertisingpages)",
+      "Bash(powershell Get-ChildItem -Path \"advertising\\\\pages\")"
+    ]
+  }
+}
