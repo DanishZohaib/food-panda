@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - foodpanda</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <div class="top-nav">
+        <div class="container">
+            <div class="top-nav-content">
+                <div class="top-left">
+                    <a href="#"><i class="fas fa-headset"></i> Contact Us</a>
+                    <div class="language-selector">
+                        <select>
+                            <option>EN</option>
+                            <option>FR</option>
+                            <option>DE</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="top-right">
+                    <a href="#"><i class="fas fa-mobile-alt"></i> Download App</a>
+                    <a href="#"><i class="fas fa-user"></i> Account</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <h1>foodpanda</h1>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="restaurants.html">Restaurants</a></li>
+                        <li><a href="#">Deals</a></li>
+                        <li><a href="#">Panda Pro</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-container">
+                        <input type="text" placeholder="Search for restaurants or dishes...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                    <div class="auth-buttons">
+                        <button class="btn-login">Log in</button>
+                        <button class="btn-signup">Sign up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Account Dashboard -->
+    <section class="account-dashboard">
+        <div class="container">
+            <div class="dashboard-content">
+                <div class="sidebar">
+                    <div class="user-profile">
+                        <div class="avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3>John Doe</h3>
+                        <p>john.doe@email.com</p>
+                    </div>
+
+                    <ul class="nav-menu">
+                        <li><a href="#" class="active"><i class="fas fa-user"></i> Profile Information</a></li>
+                        <li><a href="#"><i class="fas fa-history"></i> Order History</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Saved Addresses</a></li>
+                        <li><a href="#"><i class="fas fa-credit-card"></i> Payment Methods</a></li>
+                        <li><a href="#"><i class="fas fa-heart"></i> Favorites</a></li>
+                        <li><a href="#"><i class="fas fa-gift"></i> Vouchers & Offers</a></li>
+                        <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                        <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </div>
+
+                <div class="main-content">
+                    <!-- Profile Information Section -->
+                    <div class="section active" id="profile-info">
+                        <h2>Profile Information</h2>
+
+                        <div class="profile-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">First Name</label>
+                                    <input type="text" id="first-name" value="John">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="last-name">Last Name</label>
+                                    <input type="text" id="last-name" value="Doe">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" value="john.doe@email.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" value="+1 234 567 8900">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dob">Date of Birth</label>
+                                <input type="date" id="dob" value="1990-05-15">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Profile Photo</label>
+                                <div class="avatar-upload">
+                                    <div class="avatar-preview">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <button class="btn-login">Change Photo</button>
+                                </div>
+                            </div>
+
+                            <button class="btn-signup">Save Changes</button>
+                        </div>
+                    </div>
+
+                    <!-- Order History Section -->
+                    <div class="section" id="order-history">
+                        <h2>Order History</h2>
+
+                        <div class="order-filters">
+                            <div class="search-box">
+                                <i class="fas fa-search"></i>
+                                <input type="text" placeholder="Search orders...">
+                            </div>
+
+                            <select class="filter-select">
+                                <option>All Dates</option>
+                                <option>Last 7 Days</option>
+                                <option>Last 30 Days</option>
+                                <option>Last 3 Months</option>
+                            </select>
+                        </div>
+
+                        <div class="order-list">
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-id">Order #FP123456789</div>
+                                    <div class="order-date">Dec 15, 2024</div>
+                                </div>
+
+                                <div class="order-details">
+                                    <div class="restaurant-info">
+                                        <img src="../images/restaurant-logo-lg.png" alt="Restaurant Logo">
+                                        <div>
+                                            <h3>Spicy Hub</h3>
+                                            <div class="order-items">3 items • $34.87</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="order-status delivered">
+                                        Delivered
+                                    </div>
+                                </div>
+
+                                <div class="order-actions">
+                                    <button class="btn-login">Reorder</button>
+                                    <button class="btn-login">Rate & Review</button>
+                                </div>
+                            </div>
+
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-id">Order #FP987654321</div>
+                                    <div class="order-date">Dec 10, 2024</div>
+                                </div>
+
+                                <div class="order-details">
+                                    <div class="restaurant-info">
+                                        <img src="../images/restaurant-logo2.png" alt="Restaurant Logo">
+                                        <div>
+                                            <h3>Burger Palace</h3>
+                                            <div class="order-items">2 items • $28.50</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="order-status delivered">
+                                        Delivered
+                                    </div>
+                                </div>
+
+                                <div class="order-actions">
+                                    <button class="btn-login">Reorder</button>
+                                    <button class="btn-login">Rate & Review</button>
+                                </div>
+                            </div>
+
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-id">Order #FP456789123</div>
+                                    <div class="order-date">Dec 5, 2024</div>
+                                </div>
+
+                                <div class="order-details">
+                                    <div class="restaurant-info">
+                                        <img src="../images/restaurant-logo3.png" alt="Restaurant Logo">
+                                        <div>
+                                            <h3>Sushi Express</h3>
+                                            <div class="order-items">4 items • $42.75</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="order-status canceled">
+                                        Canceled
+                                    </div>
+                                </div>
+
+                                <div class="order-actions">
+                                    <button class="btn-login">Reorder</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Saved Addresses Section -->
+                    <div class="section" id="saved-addresses">
+                        <h2>Saved Addresses</h2>
+
+                        <div class="addresses-list">
+                            <div class="address-card">
+                                <div class="address-label home">Home</div>
+                                <div class="address-details">
+                                    <p>123 Main Street</p>
+                                    <p>Apt 4B</p>
+                                    <p>Pretoria, South Africa</p>
+                                </div>
+                                <div class="address-actions">
+                                    <button class="btn-login">Edit</button>
+                                    <button class="btn-login">Delete</button>
+                                    <span class="default-badge">Default</span>
+                                </div>
+                            </div>
+
+                            <div class="address-card">
+                                <div class="address-label work">Work</div>
+                                <div class="address-details">
+                                    <p>456 Business Avenue</p>
+                                    <p>Office 12</p>
+                                    <p>Pretoria, South Africa</p>
+                                </div>
+                                <div class="address-actions">
+                                    <button class="btn-login">Edit</button>
+                                    <button class="btn-login">Delete</button>
+                                    <button class="btn-login">Set as Default</button>
+                                </div>
+                            </div>
+
+                            <div class="address-card">
+                                <div class="address-label other">Other</div>
+                                <div class="address-details">
+                                    <p>789 Residential Road</p>
+                                    <p>Floor 3</p>
+                                    <p>Pretoria, South Africa</p>
+                                </div>
+                                <div class="address-actions">
+                                    <button class="btn-login">Edit</button>
+                                    <button class="btn-login">Delete</button>
+                                    <button class="btn-login">Set as Default</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn-signup">Add New Address</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-section">
+                    <h3>Delivery & Support</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Delivery Calculator</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">Consumer Protection</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>About foodpanda</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>For Restaurants</h3>
+                    <ul>
+                        <li><a href="#">Partner With Us</a></li>
+                        <li><a href="#">Restaurant App</a></li>
+                        <li><a href="#">Business Solutions</a></li>
+                        <li><a href="#">Online Ordering</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 foodpanda All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Tab navigation for account sections
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            const sections = document.querySelectorAll('.section');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    // Remove active class from all links and sections
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+
+                    // Add active class to clicked link
+                    this.classList.add('active');
+
+                    // Show corresponding section
+                    const targetId = this.getAttribute('href').substring(1);
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+
+            // Initialize the first section as active
+            document.getElementById('profile-info').classList.add('active');
+        });
+    </script>
+</body>
+</html>
