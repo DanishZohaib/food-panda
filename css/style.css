@@ -38,9 +38,9 @@ body {
 }
 
 .hero-text h1 {
-  font-size: 48px;
+  font-size: 30px;
   color: #ffffff;
-  max-width: 400px;
+  max-width: 100px;
 }
 
 .hero-text p {
@@ -109,7 +109,7 @@ footer {
 }
 
 .hero-content h1 {
-  font-size: 48px;
+  font-size: 60px;
   max-width: 450px;
 }
 
